@@ -15,7 +15,9 @@ const appRoutes: Routes = [
 
     { path: 'admin', component: AdminComponent, canActivate: [AuthGuard],
         children: [
+          { path: 'activity', component: HomeComponent, canActivate: [AuthGuard] },
           { path: 'files', component: FilesComponent, canActivate: [AuthGuard] },
+          { path: 'trash', component: HomeComponent, canActivate: [AuthGuard] },
         ]
     },
     
