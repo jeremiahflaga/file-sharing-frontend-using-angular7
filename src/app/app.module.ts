@@ -13,8 +13,11 @@ import { AlertComponent } from './_components';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
-import { RegisterComponent } from './register';;
-import { LeftPanelComponent } from './left-panel/left-panel.component'
+import { RegisterComponent } from './register';
+
+import { AdminComponent } from './admin/admin.component';
+import { LeftPanelComponent } from './left-panel/left-panel.component';
+import { FilesComponent } from './files/files.component';
 
 @NgModule({
     imports: [
@@ -28,10 +31,11 @@ import { LeftPanelComponent } from './left-panel/left-panel.component'
         AlertComponent,
         HomeComponent,
         LoginComponent,
-        RegisterComponent
-,
-        LeftPanelComponent
-    ],
+        RegisterComponent,
+        AdminComponent,
+        LeftPanelComponent,
+        FilesComponent,
+      ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
