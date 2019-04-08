@@ -17,7 +17,8 @@ import { RegisterComponent } from './register';
 
 import { AdminComponent } from './admin/admin.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
-import { FilesComponent } from './files/files.component';
+import { FilesComponent } from './files/files.component';;
+import { FilesActionsPanelComponent } from './files-actions-panel/files-actions-panel.component'
 
 @NgModule({
     imports: [
@@ -35,6 +36,7 @@ import { FilesComponent } from './files/files.component';
         AdminComponent,
         LeftPanelComponent,
         FilesComponent,
+        FilesActionsPanelComponent
       ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
