@@ -1,5 +1,3 @@
-# angular-7-registration-login-example
+# Simple File Sharing App - frontend, using Angular 7
 
-Angular 7 User Registration and Login Example with Angular CLI
-
-Full tutorial with example available at http://jasonwatmore.com/post/2018/10/29/angular-7-user-registration-and-login-example-tutorial
+**NOTE:** Because I'm not yet good when it comes to Authentication and Authorization part of a software system, I used an existing codebase to get me started with this project: I used the "Angular 7 - User Registration and Login" template, located in https://github.com/cornflourblue/angular-7-registration-login-example-cli, created by Jason Watmore.
