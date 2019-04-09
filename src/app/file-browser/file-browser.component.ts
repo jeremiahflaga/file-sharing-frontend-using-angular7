@@ -44,6 +44,10 @@ export class FileBrowserComponent implements OnInit {
   getSelectedFiles() {
     return this.files.filter(file => file.isSelected === true);
   }
+  
+  hasSelectedFiles() {
+    return this.getSelectedFiles().length > 0;
+  }
 }
 
 class FileVM {  

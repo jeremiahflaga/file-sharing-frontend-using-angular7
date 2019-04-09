@@ -59,7 +59,17 @@
 
     </div>    
     <div class="col-sm-2">
-      <app-files-actions-panel></app-files-actions-panel>
+      <nav class="navbar">
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link" [routerLink]=""><small>New Folder</small></a>
+          <a class="nav-link" [routerLink]=""><small>Upload Folder</small></a>
+          <a class="nav-link" [routerLink]="" [hidden]="hasSelectedFiles()"><small>Upload Files</small></a>
+          <a class="nav-link" [routerLink]="" [hidden]="!hasSelectedFiles()"><small>Download Selected</small></a>
+          <a class="nav-link" [routerLink]="" [hidden]="!hasSelectedFiles()"><small>Delete Selected</small></a>
+          <a class="nav-link" [routerLink]="" [hidden]="!hasSelectedFiles()"><small>Move Selected</small></a>
+          <a class="nav-link" [routerLink]="" [hidden]="!hasSelectedFiles()"><small>Copy Selected</small></a>
+        </nav>
+      </nav>
     </div>
   </div>
 </div>
