@@ -12,7 +12,7 @@
           <tr>
             <th scope="col">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" type="checkbox" (change)="selectAllFiles($event)">
               </div>
             </th>
             <th scope="col">Name</th>
@@ -52,8 +52,8 @@
 
     <div>
       <strong>Selected Files:</strong>
-      <ul *ngFor="let file of selectedFiles | keyvalue">
-        <li>{{ file.key }} --> {{file.value.name}}</li>
+      <ul *ngFor="let file of getSelectedFiles()">
+        <li>{{ file.id }} --> {{file.name}}</li>
       </ul>
     </div>
 

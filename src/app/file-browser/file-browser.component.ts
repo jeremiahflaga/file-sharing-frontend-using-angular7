@@ -8,7 +8,6 @@ import { File } from '@app/_models';
 export class FileBrowserComponent implements OnInit {
 
   files: Array<FileVM> = [];
-  selectedFiles: Map<number, File> = new Map();
 
   constructor() { }
 
@@ -23,13 +22,27 @@ export class FileBrowserComponent implements OnInit {
   }
 
   fileCheckChanged(file: FileVM, event) {
-    if (event.target.checked) {      
-      this.selectedFiles.set(file.id, file);
+    if (event.target.checked) {
+      file.isSelected = true;
     } else {
-      if (this.selectedFiles.has(file.id)) {
-        this.selectedFiles.delete(file.id);
-      }
+      file.isSelected = false;
     }
+  }
+
+  selectAllFiles(event) {
+    if (event.target.checked) {      
+      this.files.forEach(file => {
+        file.isSelected = true;
+      });
+    } else {
+      this.files.forEach(file => {        
+        file.isSelected = false;
+      });
+    }
+  }
+
+  getSelectedFiles() {
+    return this.files.filter(file => file.isSelected === true);
   }
 }
 
