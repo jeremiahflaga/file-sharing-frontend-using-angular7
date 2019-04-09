@@ -22,10 +22,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let file of files; trackBy: fileTrackByFn">
+          <tr *ngFor="let file of files; trackBy: fileTrackByFn" >
             <th scope="row">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" [checked]="file.isSelected"
+                 type="checkbox" (change)="fileCheckChanged(file, $event)">
               </div>
             </th>
             <td>{{ file.name }}</td>
@@ -48,6 +49,14 @@
           </tr>
         </tbody>
       </table>
+
+    <div>
+      <strong>Selected Files:</strong>
+      <ul *ngFor="let file of selectedFiles | keyvalue">
+        <li>{{ file.key }} --> {{file.value.name}}</li>
+      </ul>
+    </div>
+
     </div>    
     <div class="col-sm-2">
       <app-files-actions-panel></app-files-actions-panel>
