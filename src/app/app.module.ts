@@ -15,7 +15,7 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 
-import { AdminComponent } from './admin/admin.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
 import { FileBrowserComponent } from './file-browser/file-browser.component';;
 import { FilesActionsPanelComponent } from './files-actions-panel/files-actions-panel.component'
@@ -33,7 +33,7 @@ import { FilesActionsPanelComponent } from './files-actions-panel/files-actions-
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-        AdminComponent,
+        AdminDashboardComponent,
         LeftPanelComponent,
         FileBrowserComponent,
         FilesActionsPanelComponent
