@@ -6,7 +6,7 @@ import { RegisterComponent } from './register';
 import { AuthGuard } from './_guards';
 
 import { AdminComponent } from './admin/admin.component';
-import { FilesComponent } from './files/files.component';
+import { FileBrowserComponent } from './file-browser/file-browser.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -16,7 +16,7 @@ const appRoutes: Routes = [
     { path: 'admin', component: AdminComponent, canActivate: [AuthGuard],
         children: [
           { path: 'activity', component: HomeComponent, canActivate: [AuthGuard] },
-          { path: 'files', component: FilesComponent, canActivate: [AuthGuard] },
+          { path: 'files', component: FileBrowserComponent, canActivate: [AuthGuard] },
           { path: 'trash', component: HomeComponent, canActivate: [AuthGuard] },
         ]
     },

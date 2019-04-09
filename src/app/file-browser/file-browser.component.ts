@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { File } from '@app/_models';
 
 @Component({
-  selector: 'app-files',
-  templateUrl: './files.component.html',
+  selector: 'app-file-browser',
+  templateUrl: './file-browser.component.html',
 })
-export class FilesComponent implements OnInit {
+export class FileBrowserComponent implements OnInit {
 
   files: Array<FileVM> = [];
   selectedFiles: Map<number, File> = new Map();

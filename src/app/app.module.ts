@@ -17,7 +17,7 @@ import { RegisterComponent } from './register';
 
 import { AdminComponent } from './admin/admin.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
-import { FilesComponent } from './files/files.component';;
+import { FileBrowserComponent } from './file-browser/file-browser.component';;
 import { FilesActionsPanelComponent } from './files-actions-panel/files-actions-panel.component'
 
 @NgModule({
@@ -35,7 +35,7 @@ import { FilesActionsPanelComponent } from './files-actions-panel/files-actions-
         RegisterComponent,
         AdminComponent,
         LeftPanelComponent,
-        FilesComponent,
+        FileBrowserComponent,
         FilesActionsPanelComponent
       ],
     providers: [
