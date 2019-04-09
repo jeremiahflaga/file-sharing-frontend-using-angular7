@@ -48,6 +48,13 @@ export class FileBrowserComponent implements OnInit {
   hasSelectedFiles() {
     return this.getSelectedFiles().length > 0;
   }
+
+  openCreateFolderDialog() {
+    let dialogRef = dialog.open(UserProfileComponent, {
+      height: '400px',
+      width: '600px',
+    });
+  }
 }
 
 class FileVM {  

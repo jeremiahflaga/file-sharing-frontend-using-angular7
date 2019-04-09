@@ -9,6 +9,9 @@ import { fakeBackendProvider } from './_helpers';
 import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule, MatDialogModule } from '@angular/material';
+
 import { AlertComponent } from './_components';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
@@ -25,7 +28,11 @@ import { FilesActionsPanelComponent } from './files-actions-panel/files-actions-
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        routing
+        routing,
+        BrowserAnimationsModule,
+        MatButtonModule, 
+        MatCheckboxModule,
+        MatDialogModule
     ],
     declarations: [
         AppComponent,
