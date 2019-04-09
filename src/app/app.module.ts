@@ -10,7 +10,7 @@ import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatDialogModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatDialogModule, MatInputModule } from '@angular/material';
 
 import { AlertComponent } from './_components';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
@@ -20,8 +20,17 @@ import { RegisterComponent } from './register';
 
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
-import { FileBrowserComponent } from './file-browser/file-browser.component';;
-import { FilesActionsPanelComponent } from './files-actions-panel/files-actions-panel.component'
+import { FileBrowserComponent } from './file-browser/file-browser.component';
+import { FilesActionsPanelComponent } from './files-actions-panel/files-actions-panel.component';
+import { CreateFolderDialogComponent } from './create-folder-dialog/create-folder-dialog.component';
+
+const materialModules = [
+  BrowserAnimationsModule,
+  MatButtonModule, 
+  MatCheckboxModule,
+  MatDialogModule,
+  MatInputModule
+];
 
 @NgModule({
     imports: [
@@ -29,10 +38,7 @@ import { FilesActionsPanelComponent } from './files-actions-panel/files-actions-
         ReactiveFormsModule,
         HttpClientModule,
         routing,
-        BrowserAnimationsModule,
-        MatButtonModule, 
-        MatCheckboxModule,
-        MatDialogModule
+        materialModules,
     ],
     declarations: [
         AppComponent,
@@ -43,7 +49,8 @@ import { FilesActionsPanelComponent } from './files-actions-panel/files-actions-
         AdminDashboardComponent,
         LeftPanelComponent,
         FileBrowserComponent,
-        FilesActionsPanelComponent
+        FilesActionsPanelComponent,
+        CreateFolderDialogComponent
       ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
@@ -52,7 +59,8 @@ import { FilesActionsPanelComponent } from './files-actions-panel/files-actions-
         // provider used to create fake backend
         fakeBackendProvider
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents: [CreateFolderDialogComponent]
 })
 
 export class AppModule { }
